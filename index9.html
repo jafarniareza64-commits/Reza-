@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>آموزش برنامه‌نویسی پایتون | Python Tutorial</title>
+  
+  <meta name="description" content="سایت آموزش برنامه‌نویسی پایتون با آموزش‌های کاربردی، پروژه‌های جذاب و منابع مفید برای یادگیری Python." />
+  <meta name="keywords" content="پایتون, آموزش پایتون, برنامه نویسی, Python, Python tutorial, یادگیری پایتون" />
+  <meta name="author" content="نام شما" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph برای اشتراک بهتر در شبکه‌های اجتماعی -->
+  <meta property="og:title" content="آموزش برنامه‌نویسی پایتون" />
+  <meta property="og:description" content="سایت آموزش برنامه‌نویسی پایتون با آموزش‌های کاربردی و پروژه‌های جذاب." />
+  <meta property="og:image" content="https://www.python.org/static/community_logos/python-logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com" />
+  
+  <!-- اضافه کردن فونت ایران‌سنس از Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap&subset=arabic" rel="stylesheet">
+
+  <style>
+    /* تنظیمات فونت و رنگ */
+    body {
+      font-family: 'Vazirmatn', Tahoma, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      direction: rtl;
+    }
+    /* استایل منوی ناوبری */
+    nav {
+      background-color: #306998;
+      padding: 10px 20px;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      box-shadow: 0 2px 8px rgba(48,105,152,0.3);
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-start;
+      gap: 20px;
+    }
+    nav ul li {
+      
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+    nav ul li a:hover {
+      background-color: #25507a;
+    }
+
+    /* هدر */
+    header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+    }
+    header h1 {
+      color: #306998;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    /* بدنه اصلی */
+    main {
+      max-width: 800px;
+      background: #fff;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    img {
+      display: block;
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      margin: 20px auto 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(48,105,152,0.2);
+    }
+    article {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    article h2 {
+      font-size: 1.8rem;
+      color: #306998;
+      margin-bottom: 12px;
+    }
+    ul {
+      padding-right: 20px;
+      margin-bottom: 20px;
+    }
+    ul li {
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    /* فوتر */
+    footer {
+      max-width: 800px;
+      margin: 40px auto 20px auto;
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    /* دکمه‌های شبکه‌های اجتماعی */
+    .social-links {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    .social-links a {
+      color: #306998;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .social-links a:hover {
+      color: #25507a;
+    }
+
+    /* واکنش‌گرایی */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      article h2 {
+        font-size: 1.4rem;
+      }
+      article {
+        font-size: 1rem;
+      }
+      main {
+        padding: 20px;
+      }
+      img {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+      .social-links {
+        gap: 10px;
+      }
+    }
+  </style>
+
+  <!-- اضافه کردن آیکون‌های شبکه‌های اجتماعی با Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- منوی ناوبری -->
+  <nav aria-label="منوی اصلی سایت">
+    <ul>
+      <li><a href="#why-python">چرا پایتون؟</a></li>
+      <li><a href="#topics">مباحث آموزشی</a></li>
+      <li><a href="#start-learning">شروع یادگیری</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>آموزش برنامه‌نویسی پایتون</h1>
+    <p>سایت مرجع یادگیری زبان برنامه‌نویسی Python</p>
+  </header>
+  <main>
+    <img src="https://www.python.org/static/community_logos/python-logo.png" alt="لوگوی پایتون" />
+    
+    <article id="why-python">
+      <h2>چرا پایتون؟</h2>
+      <p>پایتون یکی از محبوب‌ترین و پرکاربردترین زبان‌های برنامه‌نویسی دنیا است. به خاطر سادگی نحو (syntax) و قدرت بالای آن، یادگیری و توسعه پروژه‌های مختلف در حوزه‌های وب، هوش مصنوعی، علم داده و اتوماسیون را آسان کرده است.</p>
+    </article>
+    
+    <article id="topics">
+      <h2>مباحث آموزشی</h2>
+      <ul>
+        <li>مقدمات زبان پایتون</li>
+        <li>برنامه‌نویسی شیءگرا</li>
+        <li>کار با کتابخانه‌های معروف مثل NumPy، Pandas و Django</li>
+        <li>ساخت پروژه‌های کاربردی</li>
+      </ul>
+    </article>
+    
+    <article id="start-learning">
+      <h2>شروع یادگیری</h2>
+      <p>اگر تازه وارد دنیای برنامه‌نویسی شده‌اید، پایتون بهترین گزینه است. با منابع آنلاین، آموزش‌های ویدیویی و مثال‌های عملی، می‌توانید به سرعت مهارت‌های خود را افزایش دهید.</p>
+      <p>برای شروع، <a href="https://www.python.org/about/gettingstarted/" target="_blank" rel="noopener noreferrer">صفحه رسمی آموزش پایتون</a> را مشاهده کنید.</p>
+    </article>
+  </main>
+  
+  <footer>
+    &copy; 2025 تمامی حقوق محفوظ است | طراحی شده توسط رضا جعفرنیا 
+    <div class="social-links" aria-label="شبکه‌های اجتماعی">
+      <a href="https://twitter.com/python" target="_blank" rel="noopener noreferrer" aria-label="توییتر"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.facebook.com/pythonlang" target="_blank" rel="noopener noreferrer" aria-label="فیسبوک"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/pythonlang/" target="_blank" rel="noopener noreferrer" aria-label="اینستاگرام"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/python" target="_blank" rel="noopener noreferrer" aria-label="گیت‌هاب"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
